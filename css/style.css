@@ -1,0 +1,178 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Literata", serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+/* ul,
+li, */
+a,
+div,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Literata", serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  list-style: none;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  animation: img-appear 0.5s linear;
+}
+/* styles */
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.photoAndGeneralInformation {
+  display: flex;
+  transition: 0.3s ease all;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  animation: border-appear 1s linear;
+  border: 2px solid rgb(156, 150, 150);
+}
+.photoAndGeneralInformation:hover {
+  border: 2px solid #000;
+}
+.myPhoto {
+  max-width: 50%;
+}
+.textBox {
+  padding: 40px;
+  width: 100%;
+  animation: text-box-appear 0.5s linear;
+}
+.textBoxItem {
+  line-height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.bolt {
+  font-weight: 700;
+}
+a {
+  transition: 0.3s ease all;
+}
+.photoAndGeneralInformation a {
+  color: rgb(68, 68, 250);
+  margin-left: 10px;
+}
+.photoAndGeneralInformation a:hover {
+  color: rgb(17, 17, 151);
+}
+
+.information {
+  animation: informarion-appear 0.5s linear;
+  border: 2px solid rgb(164, 171, 201);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.3s ease all;
+}
+.information:hover {
+  border: 2px solid rgb(61, 24, 161);
+}
+.information p {
+  line-height: 38px;
+}
+.information a {
+  color: rgb(68, 68, 250);
+}
+.information a:hover {
+  color: rgb(17, 17, 151);
+}
+.information .bolt {
+  margin-left: 20px;
+}
+.information p:last-child {
+  text-align: center;
+}
+.skills {
+  list-style-type: none;
+}
+ul.skills li:before {
+  content: "\2713\0020";
+}
+@keyframes img-appear {
+  0% {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes text-box-appear {
+  0% {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes informarion-appear {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes border-appear {
+  0% {
+    border: none;
+  }
+  100% {
+    border: 2px solid #000;
+  }
+}
+
+/* ///////////////////// */
+
+@media (max-width: 900px) {
+  p {
+    font-size: 14px;
+  }
+  .photoAndGeneralInformation {
+    display: block;
+  }
+
+  .myPhoto {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  .textBox {
+    width: auto;
+  }
+  .information {
+    padding: 40px;
+  }
+}
+@media (max-width: 550px) {
+  p,
+  li,
+  a {
+    font-size: 12px;
+  }
+  .information {
+    padding: 20px;
+  }
+}
